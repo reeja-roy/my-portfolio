@@ -1,5 +1,5 @@
 import React from "react";
-import { Mail, Phone, Github, Linkedin } from "lucide-react";
+i
 import { MdEmail, MdPhone } from "react-icons/md";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 
