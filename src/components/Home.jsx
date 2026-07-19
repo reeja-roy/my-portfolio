@@ -1,5 +1,6 @@
 import React from "react";
-import profile from "../assets/reeja.jpeg";
+import profile from "../assets/reeja.jpg";
+
 
 const Home = () => {
   return (
@@ -58,13 +59,13 @@ const Home = () => {
               {/* Gradient Ring */}
               <div className="w-80 h-80 md:w-96 md:h-96 rounded-full  p-2">
 
-               <img
-  src={profile}
-  alt="Profile"
-  className="w-80 h-80 border-4 border-red-500"
-/>
+                <img
+                  src={profile}
+                  alt="Profile"
+                  className="w-80 h-80 border-4 border-red-500"
+                />
 
-              
+
 
               </div>
 
