@@ -1,5 +1,5 @@
 import React from "react";
-import { FaGithub, FaLinkedin, FaHeart } from "react-icons/fa";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 
 const Footer = () => {
@@ -82,10 +82,7 @@ const Footer = () => {
 
           <p>© {year} Reeja Roy. All rights reserved.</p>
 
-          <p className="flex items-center gap-2">
-            Built with React & Tailwind CSS
-            <FaHeart className="text-red-500" />
-          </p>
+
 
         </div>
 
