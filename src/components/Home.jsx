@@ -1,6 +1,6 @@
 import React from "react";
 import profile from "../assets/reeja.jpg";
-import demo from "../assets/logo512.png"
+
 
 const Home = () => {
   return (
