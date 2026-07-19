@@ -52,29 +52,23 @@ const Home = () => {
           </div>
 
           {/* Right */}
-          <div className="flex justify-center">
+    {/* Right */}
+<div className="flex justify-center">
+  <div className="relative">
 
-            <div className="relative">
+    <div className="bg-slate-800 p-3 rounded-3xl shadow-2xl border border-slate-700">
+      <img
+        src={profile}
+        alt="Reeja Roy"
+        className="w-[350px] lg:w-[430px] h-auto rounded-2xl object-cover"
+      />
+    </div>
 
-              {/* Gradient Ring */}
-              <div className="w-80 h-80 md:w-96 md:h-96 rounded-full  p-2">
+    {/* Background Glow */}
+    <div className="absolute -z-10 top-6 left-6 w-full h-full bg-blue-500 rounded-3xl blur-3xl opacity-20"></div>
 
-                <img
-                  src={profile}
-                  alt="Profile"
-                  className="w-80 h-80 border-4 border-red-500"
-                />
-
-
-
-              </div>
-
-              {/* Decorative Glow */}
-              <div className="absolute -z-10 inset-0 rounded-full bg-blue-500 blur-3xl opacity-20"></div>
-
-            </div>
-
-          </div>
+  </div>
+</div>
 
         </div>
 
