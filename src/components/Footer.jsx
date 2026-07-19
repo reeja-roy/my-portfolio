@@ -82,8 +82,6 @@ const Footer = () => {
 
           <p>© {year} Reeja Roy. All rights reserved.</p>
 
-
-
         </div>
 
       </div>
