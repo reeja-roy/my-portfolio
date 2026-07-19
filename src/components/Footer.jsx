@@ -1,5 +1,5 @@
 import React from "react";
-import { FaGithub, FaLinkedin, FaHeart } from "react-icons/fa";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 
 const Footer = () => {
@@ -81,6 +81,8 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row justify-between items-center text-gray-500 text-sm gap-3">
 
           <p>© {year} Reeja Roy. All rights reserved.</p>
+
+
 
         </div>
 
