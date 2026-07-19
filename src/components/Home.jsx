@@ -43,7 +43,7 @@ const Home = () => {
 
               <a
                 href="#contact"
-                className="border border-slate-500 hover:border-blue-500 px-6 py-3 rounded-lg font-semibold transition"
+                className="border border-slate-500 hover:border-blue-500 px-6 py-3 text-white rounded-lg font-semibold transition"
               >
                 Contact Me
               </a>
