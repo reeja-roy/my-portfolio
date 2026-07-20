@@ -21,7 +21,7 @@ const Navbar = () => {
           className="text-2xl font-bold text-white"
           onClick={() => setIsOpen(false)}
         >
-          Reeja <span className="text-blue-400">Roy</span>
+          Reeja Roy
         </a>
 
         {/* Desktop Menu */}
