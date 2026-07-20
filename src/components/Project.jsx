@@ -34,68 +34,73 @@ const Projects = () => {
   return (
     <section
       id="projects"
-      className="bg-slate-900 text-white py-24 scroll-mt-20"
+      className="bg-slate-900 py-20 lg:py-28 scroll-mt-20"
     >
       <div className="max-w-7xl mx-auto px-6">
 
         {/* Heading */}
-        <div className="text-center mb-16">
-          <p className="text-blue-400 uppercase tracking-widest font-semibold">
+        <div className="text-center mb-14 lg:mb-20">
+          <p className="text-blue-400 uppercase tracking-[0.3em] text-sm font-semibold">
             Portfolio
           </p>
 
-          <h2 className="text-4xl md:text-5xl font-bold mt-3">
+          <h2 className="mt-3 text-3xl sm:text-4xl lg:text-5xl font-bold text-white">
             Featured Projects
           </h2>
 
-          <p className="text-gray-400 mt-5 max-w-2xl mx-auto">
-            A selection of projects that demonstrate my experience in building
+          <p className="mt-5 text-gray-400 max-w-2xl mx-auto text-base md:text-lg leading-8">
+            A selection of projects that showcase my experience in building
             scalable, responsive, and user-focused web applications.
           </p>
         </div>
 
-        {/* Cards */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {/* Project Cards */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-8">
 
           {projects.map((project, index) => (
             <div
               key={index}
-              className="bg-slate-950 rounded-2xl overflow-hidden border border-slate-800 hover:border-blue-500 hover:-translate-y-2 transition-all duration-300"
+              className="bg-slate-950 border border-slate-800 rounded-2xl overflow-hidden shadow-lg hover:border-blue-500 hover:-translate-y-2 transition-all duration-300 flex flex-col"
             >
+
+              {/* Image */}
               <img
                 src={project.image}
                 alt={project.title}
-                className="w-full h-56 object-cover"
+                className="w-full h-52 sm:h-56 object-cover"
               />
 
-              <div className="p-6">
+              {/* Content */}
+              <div className="p-6 flex flex-col flex-1">
 
-                <h3 className="text-2xl font-semibold">
+                <h3 className="text-xl md:text-2xl font-semibold text-white">
                   {project.title}
                 </h3>
 
-                <p className="text-gray-400 mt-4 leading-7">
+                <p className="mt-4 text-gray-400 leading-7 flex-1">
                   {project.description}
                 </p>
 
+                {/* Tech Stack */}
                 <div className="flex flex-wrap gap-2 mt-6">
-                  {project.tech.map((item, i) => (
+                  {project.tech.map((tech) => (
                     <span
-                      key={i}
-                      className="bg-blue-600/20 text-blue-400 px-3 py-1 rounded-full text-sm"
+                      key={tech}
+                      className="px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-400 text-xs sm:text-sm"
                     >
-                      {item}
+                      {tech}
                     </span>
                   ))}
                 </div>
 
-                <div className="flex gap-4 mt-8">
+                {/* Buttons */}
+                <div className="mt-8 flex flex-col sm:flex-row gap-3">
 
                   <a
                     href={project.github}
                     target="_blank"
                     rel="noreferrer"
-                    className="flex-1 text-center border border-slate-700 hover:border-blue-500 py-3 rounded-lg transition"
+                    className="flex-1 text-center border border-slate-700 hover:border-blue-500 text-white py-3 rounded-lg transition"
                   >
                     GitHub
                   </a>
@@ -104,7 +109,7 @@ const Projects = () => {
                     href={project.demo}
                     target="_blank"
                     rel="noreferrer"
-                    className="flex-1 text-center bg-blue-600 hover:bg-blue-700 py-3 rounded-lg transition"
+                    className="flex-1 text-center bg-blue-600 hover:bg-blue-700 text-white py-3 rounded-lg transition"
                   >
                     Live Demo
                   </a>
@@ -112,6 +117,7 @@ const Projects = () => {
                 </div>
 
               </div>
+
             </div>
           ))}
 
