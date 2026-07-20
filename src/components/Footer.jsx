@@ -5,69 +5,70 @@ import { MdEmail } from "react-icons/md";
 const Footer = () => {
   const year = new Date().getFullYear();
 
+  const navLinks = [
+    { name: "Home", href: "#home" },
+    { name: "About", href: "#about" },
+    { name: "Projects", href: "#projects" },
+    { name: "Contact", href: "#contact" },
+  ];
+
   return (
     <footer className="bg-slate-950 border-t border-slate-800">
       <div className="max-w-7xl mx-auto px-6 py-10">
 
-        {/* Top */}
-        <div className="flex flex-col md:flex-row justify-between items-center gap-8">
+        {/* Top Section */}
+        <div className="flex flex-col lg:flex-row items-center justify-between gap-10">
 
           {/* Branding */}
-          <div>
-            <h2 className="text-2xl font-bold text-white">
+          <div className="text-center lg:text-left">
+            <h2 className="text-2xl md:text-3xl font-bold text-white">
               Reeja <span className="text-blue-500">Roy</span>
             </h2>
 
-            <p className="text-gray-400 mt-2">
-              Software Engineer • MERN Stack Developer
+            <p className="mt-2 text-gray-400 text-sm md:text-base">
+              Software Engineer 
             </p>
           </div>
 
           {/* Navigation */}
-          <div className="flex gap-6 text-gray-400">
-            <a href="#home" className="hover:text-blue-400 transition">
-              Home
-            </a>
+          <nav className="flex flex-wrap justify-center gap-4 sm:gap-6 text-gray-400 text-sm md:text-base">
+            {navLinks.map((link) => (
+              <a
+                key={link.name}
+                href={link.href}
+                className="hover:text-blue-400 transition"
+              >
+                {link.name}
+              </a>
+            ))}
+          </nav>
 
-            <a href="#about" className="hover:text-blue-400 transition">
-              About
-            </a>
-
-            <a href="#projects" className="hover:text-blue-400 transition">
-              Projects
-            </a>
-
-            <a href="#contact" className="hover:text-blue-400 transition">
-              Contact
-            </a>
-          </div>
-
-          {/* Social */}
-          <div className="flex gap-5">
+          {/* Social Icons */}
+          <div className="flex items-center gap-5">
 
             <a
               href="https://github.com/reeja-roy"
               target="_blank"
               rel="noreferrer"
-              className="text-gray-400 hover:text-white transition"
+              className="w-11 h-11 rounded-full bg-slate-900 border border-slate-800 flex items-center justify-center text-gray-400 hover:text-white hover:border-blue-500 transition"
             >
-              <FaGithub size={24} />
+              <FaGithub size={20} />
             </a>
 
             <a
-              href="https://linkedin.com/in/yourusername"
+              href="https://linkedin.com/in/reeja-roy"
               target="_blank"
               rel="noreferrer"
-              className="text-gray-400 hover:text-blue-400 transition"
+              className="w-11 h-11 rounded-full bg-slate-900 border border-slate-800 flex items-center justify-center text-gray-400 hover:text-blue-400 hover:border-blue-500 transition"
             >
-              <FaLinkedin size={24} />
+              <FaLinkedin size={20} />
             </a>
 
             <a
               href="mailto:reejaj143@gmail.com"
-              className="text-gray-400 hover:text-red-400 transition"
+              className="w-11 h-11 rounded-full bg-slate-900 border border-slate-800 flex items-center justify-center text-gray-400 hover:text-red-400 hover:border-red-400 transition"
             >
-              <MdEmail size={24} />
+              <MdEmail size={20} />
             </a>
 
           </div>
@@ -78,9 +79,11 @@ const Footer = () => {
         <div className="border-t border-slate-800 my-8"></div>
 
         {/* Bottom */}
-        <div className="flex flex-col md:flex-row justify-between items-center text-gray-500 text-sm gap-3">
+        <div className="flex flex-col sm:flex-row items-center justify-between gap-3 text-center text-gray-500 text-sm">
 
           <p>© {year} Reeja Roy. All rights reserved.</p>
+
+          
 
         </div>
 
